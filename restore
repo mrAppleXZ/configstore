@@ -1,0 +1,18 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+STORE="$DIR/store"
+
+echo "Syncing the $STORE..."
+while read file
+do
+	echo "Syncing $file..."
+	if [[ -d $file ]]; then
+		mkdir -p $file
+		cp -r $STORE/$file/. $file/
+	elif [[ -f $file ]]; then
+		mkdir -p `dirname $file`
+		cp -r $STORE/$file $file
+		echo "";
+	fi;
+done < "$DIR/store.lst"
+echo "Finished syncing the configs!"

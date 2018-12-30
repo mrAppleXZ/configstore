@@ -1,0 +1,22 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+STORE="$DIR/store"
+
+echo "Clearing the $STORE..."
+rm -r "$STORE"
+mkdir "$STORE"
+
+echo "Updating the $STORE..."
+while read file
+do
+	echo "Copying $file..."
+	if [[ -d $file ]]; then
+		mkdir -p $STORE/$file
+		cp -r $file/. $STORE/$file/
+	elif [[ -f $file ]]; then
+		mkdir -p $STORE/`dirname $file`
+		cp -r $file $STORE/$file
+		echo "";
+	fi;
+done < "$DIR/store.lst"
+echo "Finished updating the configs!"
