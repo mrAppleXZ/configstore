@@ -2,10 +2,10 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 STORE="$DIR/store"
 
-echo "Syncing the $STORE..."
+echo "Restoring the $STORE..."
 while read file
 do
-	echo "Syncing $file..."
+	echo "Restoring $file..."
 	if [[ -d $file ]]; then
 		mkdir -p $file
 		cp -r $STORE/$file/. $file/
@@ -15,4 +15,3 @@ do
 		echo "";
 	fi;
 done < "$DIR/store.lst"
-echo "Finished syncing the configs!"

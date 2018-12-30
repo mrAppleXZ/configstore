@@ -6,7 +6,7 @@ echo "Clearing the $STORE..."
 rm -r "$STORE"
 mkdir "$STORE"
 
-echo "Updating the $STORE..."
+echo "Syncing the $STORE..."
 while read file
 do
 	echo "Copying $file..."
@@ -19,4 +19,3 @@ do
 		echo "";
 	fi;
 done < "$DIR/store.lst"
-echo "Finished updating the configs!"
