@@ -1,0 +1,18 @@
+source /etc/zsh/zpreztorc
+source /usr/lib/prezto/init.zsh
+source /usr/lib/prezto/runcoms/zshrc
+
+EDITOR=nano
+VISUAL=nano
+alias sshdyn="ssh dyn.pearx.ru"
+alias sshsul="ssh pearx.ru"
+alias updpls="yay -Syu --noconfirm"
+alias sshlc="sshdyn tmux attach -t lc"
+unalias rm
+
+prompt_context() {
+  prompt_segment $PRIMARY_FG '' " $(whoami)@$(hostname) "
+  prompt_segment $HOST_COLOR '' " "
+}
+
+HOST_COLOR=121
