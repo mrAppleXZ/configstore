@@ -1,8 +1,8 @@
 # mrAppleXZ's configstore
 ## Applying
 You can apply all the configs from the store by running the `apply` script with superuser privileges.
-Quick apply: `git clone https://github.com/mrAppleXZ/configstore /tmp/configstore && sudo /tmp/configstore/apply && rm -rf 
-/tmp/configstore`
+## Quick apply command
+`git clone https://github.com/mrAppleXZ/configstore /tmp/configstore && sudo /tmp/configstore/apply && rm -rf /tmp/configstore`
 ## Updating
 You can update the store by running the `update` script.
 ## Adding new items to the store
