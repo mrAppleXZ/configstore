@@ -1,5 +1,5 @@
-#!/bin/bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+#!/bin/zsh
+DIR=${0:a:h}
 STORE="$DIR/store"
 
 echo "Clearing the $STORE..."
