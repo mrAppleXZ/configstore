@@ -17,4 +17,4 @@ prompt_context() {
 
 HOST_COLOR=121
 
-alias configstore="git clone https://github.com/mrAppleXZ/configstore /tmp/configstore && /tmp/configstore/apply && rm -rf /tmp/configstore"
+alias configstore="git clone https://github.com/mrAppleXZ/configstore /tmp/configstore && sudo /tmp/configstore/apply && rm -rf /tmp/configstore"
