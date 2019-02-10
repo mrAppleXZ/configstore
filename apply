@@ -2,10 +2,10 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 STORE="$DIR/store"
 
-echo "Restoring the $STORE..."
+echo "Applying the $STORE..."
 while read file
 do
-	echo "Restoring $file..."
+	echo "Applying $file..."
 	if [[ -d $file ]]; then
 		mkdir -p $file
 		cp -r $STORE/$file/. $file/

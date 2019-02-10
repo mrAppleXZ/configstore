@@ -6,7 +6,7 @@ echo "Clearing the $STORE..."
 rm -r "$STORE"
 mkdir "$STORE"
 
-echo "Syncing the $STORE..."
+echo "Updating the $STORE..."
 while read file
 do
 	echo "Copying $file..."
