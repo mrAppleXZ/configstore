@@ -6,7 +6,7 @@ EDITOR=nano
 VISUAL=nano
 alias sshdyn="ssh dyn.pearx.ru"
 alias sshsul="ssh pearx.ru"
-alias updpls="yay -Syu --noconfirm"
+alias updpls="yay -Syu --noconfirm --devel"
 alias sshlc="sshdyn tmux attach -t lc"
 unalias rm
 
